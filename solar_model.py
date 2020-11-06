@@ -11,7 +11,7 @@ def calculate_force(body, space_objects):
     Параметры:
 
     **body** — тело, для которого нужно вычислить дейстующую силу.
-    **space_objects** — список объектов, которые воздействуют на тело.
+    **space_objects** — список объектов, которые воздействуют на тело. 
     """
     G = gravitational_constant #гравитационная постоянная
     body.Fx = body.Fy = 0
