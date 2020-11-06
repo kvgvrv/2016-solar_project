@@ -11,7 +11,7 @@ def calculate_force(body, space_objects):
     Параметры:
 
     **body** — тело, для которого нужно вычислить дейстующую силу.
-    **space_objects** — список объектов, которые воздействуют на тело. 
+    **space_objects** — список объектов, которые воздействуют на тело.
     """
     G = gravitational_constant #гравитационная постоянная
     body.Fx = body.Fy = 0
@@ -19,8 +19,8 @@ def calculate_force(body, space_objects):
         if body == obj:
             continue  # тело не действует гравитационной силой на само себя!
         r = ((body.x - obj.x)**2 + (body.y - obj.y)**2)**0.5
-        body.Fx += G * body.m * obj.m / r**2 * (body.x - obj.x) / r
-        body.Fy += G * body.m * obj.m / r**2 * (body.y - obj.y) / r
+        body.Fx -= G * body.m * obj.m / r**2 * (body.x - obj.x) / r
+        body.Fy -= G * body.m * obj.m / r**2 * (body.y - obj.y) / r
         #FIXME: надо было вывести формулы сил / вывел, проверяй
 
 
